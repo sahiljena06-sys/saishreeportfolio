@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saishree Kar | Personal Portfolio Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-img">SK</div>
+            <h2>Saishree Kar</h2>
+            <p>Data Analyst</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> &nbsp; Dashboard</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> &nbsp; About Me</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> &nbsp; Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> &nbsp; Projects</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> &nbsp; Education</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> &nbsp; Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Welcome to my Portfolio Dashboard</h1>
+            <p>Exploring data, building solutions, and learning every day.</p>
+        </header>
+
+        <div class="grid-container">
+            <!-- About Me -->
+            <section id="about" class="card about-section">
+                <h2><i class="fas fa-user-circle"></i> About Me</h2>
+                <p>
+                    Aspiring Data Analyst with a strong foundation in Python and DBMS, currently pursuing B.Tech in
+                    Computer Science Engineering at NIST University.
+                    I'm deeply interested in data handling, SQL, and analytical problem solving. My strengths include
+                    being a quick learner, self-motivated, and having a logical mindset focused on skill development.
+                </p>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="card">
+                <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C / C++</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MS Excel</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Data Analysis</span>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="card">
+                <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+                <div class="project-item">
+                    <strong>Portfolio Website</strong>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Built with Next.js and Framer Motion. Features smooth animations, dark mode, and SEO
+                        optimization.
+                        Achieved 100/100 accessibility score.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education" class="card">
+                <h2><i class="fas fa-university"></i> Education</h2>
+                <div class="edu-item">
+                    <strong>B.Tech in Computer Science</strong>
+                    <p>NIST University (Expected 2026)</p>
+                    <p style="font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">CGPA: 7.27 / 10.0</p>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="card">
+                <h2><i class="fas fa-address-card"></i> Contact Details</h2>
+                <p><i class="fas fa-envelope"></i> &nbsp; <a href="mailto:saishree.kar.cse.2024@nist.edu"
+                        style="color: inherit;">saishree.kar.cse.2024@nist.edu</a></p>
+                <p><i class="fas fa-phone"></i> &nbsp; 89262 55220</p>
+                <p><i class="fas fa-map-marker-alt"></i> &nbsp; Odisha, IN</p>
+                <p><i class="fab fa-github"></i> &nbsp; <a href="https://github.com/saishreekar" target="_blank"
+                        style="color: inherit;">saishreekar</a></p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chatbot UI -->
+    <div class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <span>Portfolio Assistant</span>
+            <i class="fas fa-times" style="cursor: pointer;" id="closeChat"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Hello! I'm Saishree's Personal Portfolio Assistant. I can tell you about their skills, projects, and
+                education. How can I help you today?
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Ask me something...">
+            <button class="send-btn" id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
